@@ -87,6 +87,7 @@ set (AT_LEAN_CUDA_SRC
 if (NOT SKIP_CUCKATOO_GPU)
   build_cuda_target("${AT_LEAN_CUDA_SRC}" cuckatoo_lean_cuda_19 "-DEDGEBITS=19")
   build_cuda_target("${AT_LEAN_CUDA_SRC}" cuckatoo_lean_cuda_31 "-DEDGEBITS=31")
+  build_cuda_target("${AT_LEAN_CUDA_SRC}" cuckatoo_lean_cuda_32 "-DEDGEBITS=32")
 endif()
 
 ### AT MEAN CUDA TARGETS  #########################################
@@ -100,6 +101,9 @@ if (NOT SKIP_CUCKATOO_GPU)
   build_cuda_target("${AT_MEAN_CUDA_SRC}" cuckatoo_mean_cuda_19 "-DNEPS_A=512 -DNEPS_B=384 -DIDXSHIFT=6 -DEDGEBITS=19")
   build_cuda_target("${AT_MEAN_CUDA_SRC}" cuckatoo_mean_cuda_gtx_31 "-DNRB1=26 -DNEPS_A=135 -DNEPS_B=88 -DPART_BITS=1 -DEDGEBITS=31")
   build_cuda_target("${AT_MEAN_CUDA_SRC}" cuckatoo_mean_cuda_rtx_31 "-DNRB1=26 -DNEPS_A=133 -DNEPS_B=85 -DPART_BITS=0 -DEDGEBITS=31")
+  build_cuda_target("${AT_MEAN_CUDA_SRC}" cuckatoo_mean_cuda_gtx_32 "-DNRB1=26 -DNEPS_A=135 -DNEPS_B=88 -DPART_BITS=1 -DEDGEBITS=32")
+  build_cuda_target("${AT_MEAN_CUDA_SRC}" cuckatoo_mean_cuda_rtx_32 "-DNRB1=26 -DNEPS_A=133 -DNEPS_B=85 -DPART_BITS=0 -DEDGEBITS=32")
+  build_cuda_target("${AT_MEAN_CUDA_SRC}" cuckatoo_mean_cuda_origin_32 "-DEDGEBITS=32")
 endif()
 
 ##################################################################################
